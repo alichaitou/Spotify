@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import Dashboard from './Dashboard'
+import Login from './Components/Login'
+import NavBar from './Components/NavBar'
+import React from 'react'
+
+const code =new URLSearchParams(window.location.search).get('code');
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  
+  return(
+    <React.Fragment>
+    <NavBar/>
+    {code ? <Dashboard code={code}/> : <Login />}
+    </React.Fragment>
+    );//if we have code then go to dashboard else to login page
+
 }
 
 export default App;

@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .navbar {
+    width: 100%;
+    height: 70px;
+    margin: auto;
+    padding-left: 5rem;
+    display: flex;
+    border: 1px black solid;
+    background-color: rgb(220, 225, 228);
+  }
+  .navbar h3{
+    
+    font-size: 25px;
+    object-fit: contain;
+  }
+/*Css for artist and albums card*/
+.Card {
+    height: 300px;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    border: 1px solid black;
+
+  }
+  
+  .CardInfo {
+      width:100%;
+    padding: 2px 16px;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+  }
+  .Card-image {
+    width:100%;
+    flex: 1;
+    height: 50%;
+  }
+  
+  .Card-image img {
+    height: 100%;
+    object-fit: fill;
+    width: 100%;
+  }
+  .Card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 255, 106, 1);
+  }
+
+
+  .CardsDisplay{
+      display:grid;
+      justify-items: center;
+      grid-template-columns: auto auto auto auto;
+      row-gap: 32px;
+      column-gap: 32px;
+      width: 100%;
+  }
+  /*for large screen phones and tablets*/
+  @media screen  and (max-width:600px){
+    .CardsDisplay{
+        display:grid;
+        align-items:center;
+        row-gap: 32px;
+        column-gap: 32px;
+        grid-template-columns: auto
+        
+    }
+      
+  }
+/*for login buttin*/
+  .LoginButton{
+    background: white;
+    border: 1px solid green ;
+    color: black;
+    width:600px;
+    height:60px;
+    font-size: 2.0em;
+    font-Weight:bold;
+    
+    
+}
+ .LoginButton:hover{
+    background: Green;
+    color: White;
+ }
+/*for searchBar*/
+.search{
+    margin-top: 10px;
+}
+
+
