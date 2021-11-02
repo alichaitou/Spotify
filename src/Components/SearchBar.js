@@ -1,5 +1,5 @@
 import React from 'react'
-import {Container, Form} from 'react-bootstrap'
+import {Form} from 'react-bootstrap'
 import '../Styles.css';
 
 function SearchBar({search, setSearch}) {
